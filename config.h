@@ -6,7 +6,7 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Source:size=12" };
+static const char *fonts[]          = { "Source Code Pro:size=12" };
 static const char dmenufont[]       = "Source Code Pro:size=12";
 static const char col_gray1[]       = "#282a36";
 static const char col_gray2[]       = "#444444";
@@ -65,27 +65,28 @@ static const char *konsole[] = { "konsole", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "50x30", NULL };
 static const char *firefox[] = { "firefox-developer-edition", NULL };
+static const char *vivaldi[] = { "google-chrome-stable", NULL };
 
 /******
 Scripts
 ******/
-static const char *keynav[]		=	{ "/home/q/Script/ware/keynav.sh", NULL };
-static const char *ranger[]		=	{ "/home/q/Script/ware/st-ranger.sh", NULL };
-static const char *trayer[]		=	{ "/home/q/Script/ware/trayer.sh", NULL };
-static const char *fcitx[]		=	{ "/home/q/Script/ware/fcitx.sh", NULL };
-static const char *VolUp[]		=	{ "/home/q/Script/Audio/vol-up.sh", NULL };
-static const char *VolDown[]	=	{ "/home/q/Script/Audio/vol-down.sh", NULL };
-static const char *Mute[]		=	{ "/home/q/Script/Audio/VolMute.sh", NULL };
-static const char *PlNext[]		=	{ "/home/q/Script/Audio/Play-Next.sh", NULL };
-static const char *PlPrev[]		=	{ "/home/q/Script/Audio/Play-Prev.sh", NULL };
-static const char *Pause[]		=	{ "/home/q/Script/Audio/Play-pause.sh", NULL };
-static const char *Stop[]		=	{ "/home/q/Script/Audio/Play-Stop.sh", NULL };
-static const char *Up1[]		=	{ "/home/q/Script/Audio/vol-1u.sh", NULL };
-static const char *Dn1[]		=	{ "/home/q/Script/Audio/vol-1d.sh", NULL };
+static const char *keynav[]		=	{ "/home/q/Script/Application/keynav_switch.sh", NULL };
+static const char *ranger[]		=	{ "/home/q/Script/Application/st-file.sh", NULL };
+static const char *trayer[]		=	{ "/home/q/Script/Application/trayer_switch.sh", NULL };
+static const char *fcitx[]		=	{ "/home/q/Script/Application/fcitx_switch.sh", NULL };
+static const char *VolUp[]		=	{ "/home/q/Script/Voice/Vol-Up.sh", NULL };
+static const char *VolDown[]	=	{ "/home/q/Script/Voice/Vol-Down.sh", NULL };
+static const char *Mute[]		=	{ "/home/q/Script/Voice/Vol-Mute.sh", NULL };
+static const char *PlNext[]		=	{ "/home/q/Script/Voice/Play-Next.sh", NULL };
+static const char *PlPrev[]		=	{ "/home/q/Script/Voice/Play-Prev.sh", NULL };
+static const char *Pause[]		=	{ "/home/q/Script/Voice/Play-Pause.sh", NULL };
+static const char *Stop[]		=	{ "/home/q/Script/Voice/Play-Stop.sh", NULL };
+static const char *Up1[]		=	{ "/home/q/Script/Voice/Vol-Up_1.sh", NULL };
+static const char *Dn1[]		=	{ "/home/q/Script/Voice/Vol-Down_1.sh", NULL };
 static const char *LigInc[]		=	{ "/home/q/Script/Video/LightInc.sh", NULL };
 static const char *LigDec[]		=	{ "/home/q/Script/Video/LightDec.sh", NULL };
-static const char *WpCh[]		=	{ "/home/q/Script/Video/wp-change.sh", NULL };
-static const char *screenshot[]	=	{ "/home/q/Script/Video/screenshot.sh", NULL };
+static const char *WpCh[]		=	{ "/home/q/Script/Image/wp-change.sh", NULL };
+static const char *screenshot[]	=	{ "/home/q/Script/Application/screenshot.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -106,7 +107,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_a,		setlayout,	{.v = &layouts[2]} },
 	{ MODKEY,                       XK_b,		togglebar,	{0} },
 	{ MODKEY,			XK_f,		spawn,		   {.v = firefox } },
-//	{ MODKEY,			XK_c,		spawn,		   {.v = vivaldi } },
+	{ MODKEY,			XK_c,		spawn,		   {.v = vivaldi } },
 //	{ MODKEY,			XK_v,		spawn,		   {.v = librecad } },
 	{ MODKEY|ShiftMask,             XK_w,	    	killclient,	{0} },
 	{ MODKEY,                       XK_j,		setmfact,	{.f = -0.05} },
