@@ -64,7 +64,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *konsole[] = { "konsole", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "50x30", NULL };
-static const char *firefox[] = { "firefox-developer-edition", NULL };
+static const char *firefox[] = { "firefox", NULL };
 static const char *vivaldi[] = { "google-chrome-stable", NULL };
 
 /******
@@ -72,6 +72,7 @@ Scripts
 ******/
 static const char *keynav[]		=	{ "/home/q/Script/Application/keynav_switch.sh", NULL };
 static const char *ranger[]		=	{ "/home/q/Script/Application/st-file.sh", NULL };
+static const char *htop[]		=	{ "/home/q/Script/Application/st-htop.sh", NULL };
 static const char *trayer[]		=	{ "/home/q/Script/Application/trayer_switch.sh", NULL };
 static const char *fcitx[]		=	{ "/home/q/Script/Application/fcitx_switch.sh", NULL };
 static const char *VolUp[]		=	{ "/home/q/Script/Voice/Vol-Up.sh", NULL };
@@ -100,6 +101,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,		focusstack,	{.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_l,		zoom,		{0} },
 	{ MODKEY,						XK_e,		spawn,		{.v = ranger } },
+	{ MODKEY,						XK_Escape,		spawn,		{.v = htop } },
 //	{ MODKEY,						XK_m,		spawn,		{.v = anki } },
 //	{ MODKEY|ShiftMask,				XK_m,		spawn,		{.v = oud } },
 	{ MODKEY,                       XK_r,		setlayout,	{.v = &layouts[0]} },
