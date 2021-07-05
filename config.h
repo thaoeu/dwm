@@ -91,11 +91,11 @@ static const char *screenshot[]	=	{ "/home/q/Script/Application/screenshot.sh", 
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
+	{ MODKEY,			XK_Return,	spawn,		{.v = konsole } },
 	{ ControlMask,                       XK_space,	spawn,		{.v = dmenucmd } },
 	{ MODKEY|ShiftMask,				XK_space,	spawn,		{.v = fcitx } },
 	{ MODKEY,			XK_Insert,	spawn,		{.v = WpCh   } },
-	{ MODKEY,			XK_t,		spawn,		{.v = konsole } },
+	{ MODKEY,			XK_t,		spawn,		{.v = termcmd } },
 	{ MODKEY,                       XK_h,		focusstack,	{.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_h,		zoom,		{0} },
 	{ MODKEY,                       XK_l,		focusstack,	{.i = +1 } },
